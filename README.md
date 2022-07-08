@@ -51,5 +51,5 @@ rust-based-os-comp2022学习记录
 
 认真开始学起来，其实挺有意思的，继续学习Rust。学完基础可以看一下练习题了。:laughing:
 
-[2. Rust基础入门](Chapter_2.md)
+[2. Rust基础入门](RustLearning/Chapter_2.md)
 
