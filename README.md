@@ -60,6 +60,3 @@ rust-based-os-comp2022学习记录
 ## Day 7
 
 
-
-
-
