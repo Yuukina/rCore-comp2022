@@ -51,7 +51,11 @@ rust-based-os-comp2022学习记录
 
 认真开始学起来，其实挺有意思的，继续学习Rust，许多基础的用法与其他语言较为相似，但也存在一些差异，重点要关注这些内容。完成2.1~2.3，学完基础可以看一下练习题了。:laughing:
 
-[2. Rust基础入门](RustLearning/Chapter_2.md)
+[2.1 变量绑定与解构](RustLearning/Chapter_2_1.md)
+
+[2.2 基本类型](RustLearning/Chapter_2_2.md)
+
+[2.3 所有权和借用](RustLearning/Chapter_2_3.md)
 
 ### 待解决的问题
 
@@ -59,4 +63,6 @@ rust-based-os-comp2022学习记录
 
 ## Day 7
 
+昨天回家啦，感觉不一般的热呀，终于又喝到了茶颜悦色。今天奶奶过生日回了趟老家。
 
+研究了一下怎么使用[classroom](RustLearning/Rustling)，完成了 `intro`、`variables` 的小练习。
