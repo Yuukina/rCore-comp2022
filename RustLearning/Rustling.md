@@ -23,3 +23,35 @@
 上述的3，4，5步不是必须的，你也可以线下本地开发。如果是本地的ubuntu中建立开发环境，可在shell中执行 `make ubuntu_local_setenv` 来自动安装配置开发环境。
 
 配置完成后，按照rustling提示完成训练即可。
+
+---
+
+记小笔记：
+
+- 切片和iter都是借用。
+- 切片是只读的。
+- ```rust
+  // error_handling/errors6.md
+  
+  impl ParsePosNonzeroError {
+      // TODO: add another error conversion function here.
+      fn from_creation(err: CreationError) -> ParsePosNonzeroError {
+          ParsePosNonzeroError::Creation(err)
+      }
+  
+      fn from_parseint(err: ParseIntError) -> ParsePosNonzeroError {
+          ParsePosNonzeroError::ParseInt(err)
+      }
+  }
+  
+  fn parse_pos_nonzero(s: &str)
+      -> Result<PositiveNonzeroInteger, ParsePosNonzeroError>
+  {
+      // TODO: change this to return an appropriate error instead of panicking
+      // when `parse()` returns an error.
+      let x: i64 = s.parse().map_err(ParsePosNonzeroError::from_parseint)?;
+      PositiveNonzeroInteger::new(x)
+          .map_err(ParsePosNonzeroError::from_creation)
+  }
+  ```
+- 
