@@ -29,7 +29,9 @@
 记小笔记：
 
 - 切片和iter都是借用。
+
 - 切片是只读的。
+
 - ```rust
   // error_handling/errors6.md
   
@@ -54,4 +56,27 @@
           .map_err(ParsePosNonzeroError::from_creation)
   }
   ```
-- 
+  
+- Using the ref keyword, the value is only borrowed, not moved, making it available for use after the match statement
+
+  ```rust
+  // option3.rs
+  // Make me compile! Execute `rustlings hint option3` for hints
+  
+  struct Point {
+      x: i32,
+      y: i32,
+  }
+  
+  fn main() {
+      let y: Option<Point> = Some(Point { x: 100, y: 200 });
+  
+      match y {
+          Some(ref p) => println!("Co-ordinates are {},{} ", p.x, p.y),
+          _ => println!("no match"),
+      }
+      y; // Fix without deleting this line.
+  }
+  ```
+
+  

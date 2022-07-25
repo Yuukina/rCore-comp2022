@@ -12,8 +12,6 @@ LOG=
 
 • **Fatal**: statements representing the most severe of error conditions, assumedly resulting in program termination.
 
-## 应用程序设计
-
 - 第二章新增系统调用
 
 ```rust
@@ -31,6 +29,8 @@ fn sys_write(fd: usize, buf: *const u8, len: usize) -> isize;
 /// syscall ID：93
 fn sys_exit(xstate: usize) -> !;
 ```
+
+## 应用程序设计
 
 - `user/src/linker.ld` 将程序的起始物理地址调整为 0x80400000
 
@@ -104,3 +104,44 @@ Trap分发及处理 `os/src/trap/mod.rs` 中。`trap_handler`
 
 `os/src/batch.rs/run_next_app()`
 
+## 本章代码树
+
+```
+── os2
+│   ├── Cargo.toml
+│   ├── Makefile (修改：构建内核之前先构建应用)
+│   ├── build.rs (新增：生成 link_app.S 将应用作为一个数据段链接到内核)
+│   └── src
+│       ├── batch.rs(新增：实现了一个简单的批处理系统)
+│       ├── console.rs
+│       ├── entry.asm
+│       ├── lang_items.rs
+│       ├── link_app.S(构建产物，由 os/build.rs 输出)
+│       ├── linker.ld
+│       ├── logging.rs
+│       ├── main.rs(修改：主函数中需要初始化 Trap 处理并加载和执行应用)
+│       ├── sbi.rs
+│       ├── sync(新增：包装了RefCell，暂时不用关心)
+│       │   ├── mod.rs
+│       │   └── up.rs
+│       ├── syscall(新增：系统调用子模块 syscall)
+│       │   ├── fs.rs(包含文件 I/O 相关的 syscall)
+│       │   ├── mod.rs(提供 syscall 方法根据 syscall ID 进行分发处理)
+│       │   └── process.rs(包含任务处理相关的 syscall)
+│       └── trap(新增：Trap 相关子模块 trap)
+│           ├── context.rs(包含 Trap 上下文 TrapContext)
+│           ├── mod.rs(包含 Trap 处理入口 trap_handler)
+│           └── trap.S(包含 Trap 上下文保存与恢复的汇编代码)
+└── user(新增：应用测例保存在 user 目录下)
+   ├── Cargo.toml
+   ├── Makefile
+   └── src
+      ├── bin(基于用户库 user_lib 开发的应用，每个应用放在一个源文件中)
+      │   ├── ...
+      ├── console.rs
+      ├── lang_items.rs
+      ├── lib.rs(用户库 user_lib)
+      ├── linker.ld(应用的链接脚本)
+      └── syscall.rs(包含 syscall 方法生成实际用于系统调用的汇编指令，
+                     各个具体的 syscall 都是通过 syscall 来实现的)
+```

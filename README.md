@@ -1,4 +1,5 @@
 # rCore-comp2022
+
 rust-based-os-comp2022学习记录
 
 ## Daily Schedule
@@ -10,8 +11,8 @@ rust-based-os-comp2022学习记录
 |                        |                       |            |                       | 1 <br> [[D1](#day-1)] | 2 <br> [[D2](#day-2)] | 3 <br> [[D3](#day-3)] |
 | 4 <br> []              | 5 <br> [[D4](#day-4)] | 6 <br> []  | 7 <br> [[D5](#day-5)] | 8 <br> [[D6](#day-6)] | 9 <br> []             | 10 <br> []            |
 | 11 <br> []             | 12 <br> []            | 13 <br> [] | 14 <br> []            | 15 <br> []            | 16 <br> [[D7](#day-7)]      | 17 <br> [[D8](#day-8)] |
-| 18 <br> [[D9](#day-9)] | 19 <br> [[D10](#day-10)] | 20 <br> [[D11](#day-11)] | 21 <br> [[D12](#day-12)]            | 22 <br> [[D13](#day-13)]            | 23 <br> []            | 24 <br> []            |
-| 25 <br> []             | 26 <br> []            | 27 <br> [] | 28 <br> []            | 29 <br> []            | 30 <br> []            | 31 <br> []            |
+| 18 <br> [[D9](#day-9)] | 19 <br> [[D10](#day-10)] | 20 <br> [[D11](#day-11)] | 21 <br> [[D12](#day-12)]            | 22 <br> [[D13](#day-13)]            | 23 <br> [] | 24 <br> [[D14](#day-14)] |
+| 25 <br> [[D15](#day-15)] | 26 <br> []            | 27 <br> [] | 28 <br> []            | 29 <br> []            | 30 <br> []            | 31 <br> []            |
 
 ### 八月
 
@@ -95,7 +96,7 @@ rust-based-os-comp2022学习记录
 ### 今日任务
 
 1. rCore
-   - [x] 阅读第一章，完成[Lab0-0](https://github.com/LearningOS/lab0-0-setup-env-run-os1-Yuukina)，[实验笔记](rCoreLab/Lab0-0.md)
+   - [x] 阅读第一章，完成[Lab0-0](https://github.com/LearningOS/lab0-0-setup-env-run-os1-Yuukina)，[学习笔记](rCoreLab/Lab0-0.md)
 
 ## Day 11
 
@@ -105,7 +106,7 @@ rust-based-os-comp2022学习记录
 
 1. Rust
    - [x] 2.10-2.12
-   - [x] Rust 练习题 36-54
+   - [x] Rust 练习题 36-53
 2. rCore
 
    - [x] 复习《现代操作系统》1、2章，总结笔记
@@ -126,17 +127,32 @@ rust-based-os-comp2022学习记录
 ### 今日任务
 
 1. rCore
-   - [x] 阅读第二章，完成[Lab0-1](https://github.com/LearningOS/lab0-1-run-os2-Yuukina)，[实验笔记](rCoreLab/Lab0-1.md)
+   - [x] 阅读第二章，完成[Lab0-1](https://github.com/LearningOS/lab0-1-run-os2-Yuukina)，[学习笔记](rCoreLab/Lab0-1.md)
 
 ## Day 13
+
+Rust学起来确实不轻松啊，有好多新的概念，需要进一步巩固。
 
 ### 今日任务
 
 1. Rust
-   - [ ] 2.13-2.14 + 复习
-   - [ ] Rust 练习题
+   - [x] 2.13-2.14
+   - [x] Rust 练习题 54-64
 2. rCore
+   - [x] 复习《现代操作系统》3章，总结笔记
 
-   - [ ] 复习《现代操作系统》3章，总结笔记
-   - [ ] 阅读第三章，完成[Lab1]()，[实验笔记](rCoreLab/Lab1.md)
-3. 科研工作
+## Day 14
+
+第二遍读书确实能巩固很多东西，并且能够更加找到重点。任务确实有些多，都做了一些，但是都没做完，明天继续。
+
+### 今日任务
+
+1. Rust
+   - [ ] 3.1-3.2
+2. rCore
+   - [ ] 复习《现代操作系统》6章，总结笔记
+   - [ ] 阅读第三章，完成[Lab1](https://github.com/LearningOS/lab1-os3-Yuukina)，[学习笔记](rCoreLab/Lab1.md)
+
+## Day 15
+
+继续完成昨天的任务，多出来的时间完成一点自己的科研工作。
