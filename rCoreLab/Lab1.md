@@ -44,6 +44,8 @@ pub struct TaskControlBlock {
 
 `sys_exit` 基于 `task` 子模块提供的 `exit_current_and_run_next` 接口，它的含义是退出当前的应用并切换到下个应用。
 
+`TASK_MANAGER` 管理程序，其中可变变量用 `UPSafeCell<TaskManagerInner>` 保护访问。
+
 分两步，先挂起，`TASK_MANAGER.mark_current_suspended();`，修改状态。
 
 再运行下一个程序，`TASK_MANAGER.run_next_task();`
